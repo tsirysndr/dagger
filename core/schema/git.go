@@ -1,12 +1,12 @@
 package schema
 
 import (
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/socket"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/sources/gitdns"
 	"github.com/moby/buildkit/client/llb"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/socket"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/sources/gitdns"
 )
 
 var _ ExecutableSchema = &gitSchema{}

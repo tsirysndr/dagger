@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/containerd/containerd/platforms"
-	"github.com/dagger/dagger/core"
 	"github.com/dagger/graphql/language/ast"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core"
 )
 
 type platformSchema struct {

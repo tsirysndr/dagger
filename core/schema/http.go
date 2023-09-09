@@ -1,11 +1,11 @@
 package schema
 
 import (
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/sources/httpdns"
 	"github.com/moby/buildkit/client/llb"
 	"github.com/opencontainers/go-digest"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/sources/httpdns"
 )
 
 var _ ExecutableSchema = &httpSchema{}

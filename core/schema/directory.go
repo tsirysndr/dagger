@@ -3,9 +3,9 @@ package schema
 import (
 	"io/fs"
 
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/pipeline"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/pipeline"
 )
 
 type directorySchema struct {

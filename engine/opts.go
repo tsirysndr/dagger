@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/dagger/dagger/core/pipeline"
 	controlapi "github.com/moby/buildkit/api/services/control"
+	"github.com/tsirysndr/dagger/core/pipeline"
 	"google.golang.org/grpc/metadata"
 )
 

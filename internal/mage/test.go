@@ -3,7 +3,7 @@ package mage
 import (
 	"context"
 
-	"github.com/dagger/dagger/internal/mage/sdk"
+	"github.com/tsirysndr/dagger/internal/mage/sdk"
 	"golang.org/x/sync/errgroup"
 )
 

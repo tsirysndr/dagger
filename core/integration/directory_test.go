@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/internal/testutil"
 	"github.com/moby/buildkit/identity"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/internal/testutil"
 )
 
 func TestEmptyDirectory(t *testing.T) {

@@ -9,8 +9,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/dagger/dagger/engine/client"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/engine/client"
 	"github.com/vito/progrock"
 )
 

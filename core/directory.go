@@ -20,9 +20,9 @@ import (
 	fstypes "github.com/tonistiigi/fsutil/types"
 	"github.com/vito/progrock"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/resourceid"
-	"github.com/dagger/dagger/engine/buildkit"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/resourceid"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 // Directory is a content-addressed directory.

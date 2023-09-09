@@ -15,8 +15,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dagger/dagger/engine/buildkit"
-	"github.com/dagger/dagger/network"
 	"github.com/docker/docker/pkg/idtools"
 	"github.com/moby/buildkit/cache"
 	"github.com/moby/buildkit/executor/oci"
@@ -29,6 +27,8 @@ import (
 	"github.com/moby/locker"
 	digest "github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
+	"github.com/tsirysndr/dagger/engine/buildkit"
+	"github.com/tsirysndr/dagger/network"
 )
 
 type Opt struct {

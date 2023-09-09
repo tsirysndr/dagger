@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/core/projectconfig"
-	"github.com/dagger/dagger/engine/client"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"github.com/tsirysndr/dagger/core/projectconfig"
+	"github.com/tsirysndr/dagger/engine/client"
 )
 
 var (

@@ -5,9 +5,9 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/dagger/dagger/core/resourceid"
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/moby/buildkit/session/secrets"
+	"github.com/tsirysndr/dagger/core/resourceid"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 // Secret is a content-addressed secret.

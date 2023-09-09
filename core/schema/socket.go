@@ -1,8 +1,8 @@
 package schema
 
 import (
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/socket"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/socket"
 )
 
 type socketSchema struct {

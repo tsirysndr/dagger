@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/dagger/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/pipeline"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"

@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/dagger/dagger/engine/client"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/engine/client"
 	"golang.org/x/term"
 )
 

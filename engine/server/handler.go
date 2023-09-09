@@ -8,9 +8,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/dagger/graphql"
 	"github.com/dagger/graphql/gqlerrors"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 const (

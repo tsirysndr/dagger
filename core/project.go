@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/projectconfig"
-	"github.com/dagger/dagger/core/resourceid"
-	"github.com/dagger/dagger/engine/buildkit"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/projectconfig"
+	"github.com/tsirysndr/dagger/core/resourceid"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 	"github.com/vektah/gqlparser/v2/ast"
 	"github.com/vektah/gqlparser/v2/parser"
 )

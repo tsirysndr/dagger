@@ -20,15 +20,15 @@ import (
 
 	"dagger.io/dagger"
 	"github.com/containerd/containerd/platforms"
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/schema"
-	"github.com/dagger/dagger/engine/buildkit"
-	"github.com/dagger/dagger/internal/testutil"
 	"github.com/google/go-containerregistry/pkg/name"
 	"github.com/google/go-containerregistry/pkg/v1/remote"
 	"github.com/moby/buildkit/identity"
 	ocispecs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/schema"
+	"github.com/tsirysndr/dagger/engine/buildkit"
+	"github.com/tsirysndr/dagger/internal/testutil"
 	"gopkg.in/yaml.v3"
 )
 

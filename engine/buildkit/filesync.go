@@ -14,7 +14,6 @@ import (
 	"strings"
 
 	"github.com/containerd/continuity/fs"
-	"github.com/dagger/dagger/engine"
 	bkclient "github.com/moby/buildkit/client"
 	"github.com/moby/buildkit/client/llb"
 	bkgw "github.com/moby/buildkit/frontend/gateway/client"
@@ -25,6 +24,7 @@ import (
 	bksolverpb "github.com/moby/buildkit/solver/pb"
 	"github.com/moby/buildkit/util/bklog"
 	filesynctypes "github.com/tonistiigi/fsutil/types"
+	"github.com/tsirysndr/dagger/engine"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

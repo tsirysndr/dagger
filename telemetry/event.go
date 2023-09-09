@@ -3,7 +3,7 @@ package telemetry
 import (
 	"time"
 
-	"github.com/dagger/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/pipeline"
 )
 
 const eventVersion = "2023-02-28.01"

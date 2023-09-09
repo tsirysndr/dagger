@@ -4,9 +4,9 @@ import (
 	"context"
 	"os"
 
-	"github.com/dagger/dagger/internal/cloud"
-	"github.com/dagger/dagger/internal/cloud/auth"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/internal/cloud"
+	"github.com/tsirysndr/dagger/internal/cloud/auth"
 )
 
 func init() {

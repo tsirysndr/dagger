@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dagger/dagger/engine/client"
-	"github.com/dagger/dagger/internal/tui"
 	"github.com/google/uuid"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/engine/client"
+	"github.com/tsirysndr/dagger/internal/tui"
 	"github.com/vito/progrock"
 )
 

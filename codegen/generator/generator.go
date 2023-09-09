@@ -6,9 +6,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/dagger/dagger/codegen/introspection"
-	"github.com/dagger/dagger/core/schema"
 	"github.com/dagger/graphql"
+	"github.com/tsirysndr/dagger/codegen/introspection"
+	"github.com/tsirysndr/dagger/core/schema"
 )
 
 var ErrUnknownSDKLang = errors.New("unknown sdk language")

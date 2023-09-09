@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/dagger/dagger/core"
 	"github.com/icholy/replace"
+	"github.com/tsirysndr/dagger/core"
 	"golang.org/x/text/transform"
 )
 

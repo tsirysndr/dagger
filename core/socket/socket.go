@@ -5,8 +5,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/dagger/dagger/core/resourceid"
 	"github.com/moby/buildkit/session/sshforward"
+	"github.com/tsirysndr/dagger/core/resourceid"
 )
 
 type Socket struct {

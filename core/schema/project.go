@@ -3,7 +3,7 @@ package schema
 import (
 	"fmt"
 
-	"github.com/dagger/dagger/core"
+	"github.com/tsirysndr/dagger/core"
 	"github.com/vektah/gqlparser/v2/ast"
 	"github.com/vektah/gqlparser/v2/parser"
 )

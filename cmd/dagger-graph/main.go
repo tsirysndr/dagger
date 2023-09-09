@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dagger/dagger/telemetry"
+	"github.com/tsirysndr/dagger/telemetry"
 	"github.com/vito/progrock"
 
 	"oss.terrastruct.com/d2/d2graph"

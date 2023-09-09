@@ -10,10 +10,10 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/client"
-	"github.com/dagger/dagger/internal/tui"
 	"github.com/mattn/go-isatty"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/client"
+	"github.com/tsirysndr/dagger/internal/tui"
 	"github.com/vito/progrock"
 	"github.com/vito/progrock/console"
 )

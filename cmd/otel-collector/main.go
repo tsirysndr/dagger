@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dagger/dagger/telemetry"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/telemetry"
 	"github.com/vito/progrock"
 )
 

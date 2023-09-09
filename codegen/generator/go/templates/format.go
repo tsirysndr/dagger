@@ -1,6 +1,6 @@
 package templates
 
-import "github.com/dagger/dagger/codegen/generator"
+import "github.com/tsirysndr/dagger/codegen/generator"
 
 // FormatTypeFunc is an implementation of generator.FormatTypeFuncs interface
 // to format GraphQL type into Golang.

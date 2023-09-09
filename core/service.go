@@ -8,12 +8,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/moby/buildkit/client/llb"
 	bkgw "github.com/moby/buildkit/frontend/gateway/client"
 	"github.com/moby/buildkit/identity"
 	"github.com/moby/buildkit/solver/pb"
 	"github.com/opencontainers/go-digest"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 	"github.com/vito/progrock"
 	"golang.org/x/sync/errgroup"
 )

@@ -7,7 +7,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dagger/dagger/auth"
 	bkcache "github.com/moby/buildkit/cache"
 	bkcacheconfig "github.com/moby/buildkit/cache/config"
 	"github.com/moby/buildkit/cache/remotecache"
@@ -27,6 +26,7 @@ import (
 	"github.com/moby/buildkit/util/entitlements"
 	bkworker "github.com/moby/buildkit/worker"
 	"github.com/opencontainers/go-digest"
+	"github.com/tsirysndr/dagger/auth"
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc/metadata"
 )

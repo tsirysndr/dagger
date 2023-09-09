@@ -37,7 +37,7 @@ async fn test_directory() {
 async fn test_git() {
     let c = connect().await.unwrap();
 
-    let tree = c.git("github.com/dagger/dagger").branch("main").tree();
+    let tree = c.git("github.com/tsirysndr/dagger").branch("main").tree();
 
     let _ = tree
         .entries()

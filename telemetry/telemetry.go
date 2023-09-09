@@ -34,13 +34,17 @@ type Telemetry struct {
 	doneCh chan struct{}
 }
 
-func New() *Telemetry {
+func New(ID string) *Telemetry {
 	t := &Telemetry{
 		runID:   uuid.NewString(),
 		pushURL: os.Getenv("_EXPERIMENTAL_DAGGER_CLOUD_URL"),
 		token:   os.Getenv("_EXPERIMENTAL_DAGGER_CLOUD_TOKEN"),
 		stopCh:  make(chan struct{}),
 		doneCh:  make(chan struct{}),
+	}
+
+	if ID != "" {
+		t.pushURL = fmt.Sprintf("%s?id=%s", t.pushURL, ID)
 	}
 
 	if t.pushURL == "" {

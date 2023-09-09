@@ -6,8 +6,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/dagger/dagger/internal/testutil"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/internal/testutil"
 )
 
 func TestSecretEnvFromFile(t *testing.T) {

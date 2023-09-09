@@ -11,9 +11,9 @@ import (
 	"testing"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/internal/testutil"
 	"github.com/moby/buildkit/identity"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/internal/testutil"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 )
@@ -42,7 +42,7 @@ func TestGit(t *testing.T) {
 
 	err := testutil.Query(
 		`{
-			git(url: "github.com/dagger/dagger", keepGitDir: true) {
+			git(url: "github.com/tsirysndr/dagger", keepGitDir: true) {
 				branch(name: "main") {
 					tree {
 						file(path: "README.md") {

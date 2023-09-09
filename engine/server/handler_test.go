@@ -12,11 +12,11 @@ import (
 
 	"context"
 
-	"github.com/dagger/dagger/engine/server"
 	"github.com/dagger/graphql"
 	"github.com/dagger/graphql/gqlerrors"
 	"github.com/dagger/graphql/language/location"
 	"github.com/dagger/graphql/testutil"
+	"github.com/tsirysndr/dagger/engine/server"
 )
 
 const queryString = `query={name}`

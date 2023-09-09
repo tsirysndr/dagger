@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/dagger/dagger/internal/mage/util"
+	"github.com/tsirysndr/dagger/internal/mage/util"
 
 	"dagger.io/dagger"
 	"github.com/magefile/mage/mg"

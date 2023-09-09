@@ -28,12 +28,12 @@ import (
 	"github.com/pkg/errors"
 	"github.com/vito/progrock"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/resourceid"
-	"github.com/dagger/dagger/core/socket"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/buildkit"
-	"github.com/dagger/dagger/network"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/resourceid"
+	"github.com/tsirysndr/dagger/core/socket"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/buildkit"
+	"github.com/tsirysndr/dagger/network"
 )
 
 var ErrContainerNoExec = errors.New("no command has been executed")

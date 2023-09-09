@@ -7,9 +7,9 @@ import (
 	"github.com/blang/semver"
 	"github.com/vito/progrock"
 
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/engine"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/engine"
 )
 
 type querySchema struct {

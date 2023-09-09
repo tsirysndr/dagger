@@ -23,10 +23,10 @@ import (
 	"time"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/internal/testutil"
 	"github.com/google/go-containerregistry/pkg/v1/tarball"
 	"github.com/moby/buildkit/identity"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/internal/testutil"
 	"golang.org/x/sync/errgroup"
 )
 

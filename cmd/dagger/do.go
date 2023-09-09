@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/engine/client"
 	"github.com/iancoleman/strcase"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"github.com/tsirysndr/dagger/engine/client"
 	"github.com/vektah/gqlparser/v2/ast"
 	"github.com/vektah/gqlparser/v2/formatter"
 	"github.com/vito/progrock"

@@ -21,11 +21,11 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v4"
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/engine/client"
-	"github.com/dagger/dagger/network"
 	"github.com/google/uuid"
 	"github.com/opencontainers/runtime-spec/specs-go"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/engine/client"
+	"github.com/tsirysndr/dagger/network"
 	"github.com/vito/progrock"
 	"golang.org/x/sys/unix"
 )

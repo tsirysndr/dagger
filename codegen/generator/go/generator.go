@@ -7,9 +7,9 @@ import (
 	"go/format"
 	"strings"
 
-	"github.com/dagger/dagger/codegen/generator"
-	"github.com/dagger/dagger/codegen/generator/go/templates"
-	"github.com/dagger/dagger/codegen/introspection"
+	"github.com/tsirysndr/dagger/codegen/generator"
+	"github.com/tsirysndr/dagger/codegen/generator/go/templates"
+	"github.com/tsirysndr/dagger/codegen/introspection"
 )
 
 type GoGenerator struct {

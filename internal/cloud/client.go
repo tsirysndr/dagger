@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/dagger/dagger/internal/cloud/auth"
 	"github.com/shurcooL/graphql"
+	"github.com/tsirysndr/dagger/internal/cloud/auth"
 	"golang.org/x/oauth2"
 )
 

@@ -11,12 +11,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dagger/dagger/auth"
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/schema"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/dagger/graphql"
 	"github.com/dagger/graphql/gqlerrors"
 	bkclient "github.com/moby/buildkit/client"
@@ -24,6 +18,12 @@ import (
 	"github.com/moby/buildkit/util/bklog"
 	bkworker "github.com/moby/buildkit/worker"
 	"github.com/sirupsen/logrus"
+	"github.com/tsirysndr/dagger/auth"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/schema"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 	"github.com/vito/progrock"
 )
 

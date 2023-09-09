@@ -3,9 +3,9 @@ package httpdns
 import (
 	"fmt"
 
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/moby/buildkit/client/llb"
 	srctypes "github.com/moby/buildkit/source/types"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 const AttrNetConfig = "httpdns.netconfig"

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/core"
+	"github.com/tsirysndr/dagger/core"
 )
 
 type QueryOptions struct {

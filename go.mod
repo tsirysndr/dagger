@@ -1,4 +1,4 @@
-module github.com/dagger/dagger
+module github.com/tsirysndr/dagger
 
 go 1.20
 

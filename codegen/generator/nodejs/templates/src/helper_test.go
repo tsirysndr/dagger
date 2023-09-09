@@ -6,8 +6,8 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/dagger/dagger/codegen/generator/nodejs/templates"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/codegen/generator/nodejs/templates"
 )
 
 var updateFixtures = flag.Bool("test.update-fixtures", false, "update the test fixtures")

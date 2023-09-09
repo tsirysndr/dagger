@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/dagger/dagger/engine"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/engine"
 )
 
 var versionCmd = &cobra.Command{

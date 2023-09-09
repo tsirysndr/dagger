@@ -9,8 +9,8 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/dagger/dagger/core"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/core"
 )
 
 var (

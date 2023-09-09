@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/dagger/dagger/codegen/generator"
-	"github.com/dagger/dagger/codegen/introspection"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/codegen/generator"
+	"github.com/tsirysndr/dagger/codegen/introspection"
 )
 
 var currentSchema *introspection.Schema

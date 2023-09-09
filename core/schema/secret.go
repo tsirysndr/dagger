@@ -1,7 +1,7 @@
 package schema
 
 import (
-	"github.com/dagger/dagger/core"
+	"github.com/tsirysndr/dagger/core"
 )
 
 type secretSchema struct {

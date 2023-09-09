@@ -6,12 +6,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/core/socket"
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/moby/buildkit/client/llb"
 	bkgw "github.com/moby/buildkit/frontend/gateway/client"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/socket"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 	"github.com/vito/progrock"
 )
 

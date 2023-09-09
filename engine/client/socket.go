@@ -3,8 +3,8 @@ package client
 import (
 	"context"
 
-	"github.com/dagger/dagger/core/socket"
 	"github.com/moby/buildkit/session/sshforward"
+	"github.com/tsirysndr/dagger/core/socket"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"

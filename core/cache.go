@@ -4,8 +4,8 @@ import (
 	"crypto/sha256"
 	"encoding/base64"
 
-	"github.com/dagger/dagger/core/resourceid"
 	"github.com/pkg/errors"
+	"github.com/tsirysndr/dagger/core/resourceid"
 )
 
 // CacheVolume is a persistent volume with a globally scoped identifier.

@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/dagger/dagger/cmd/otel-collector/loki"
+	"github.com/tsirysndr/dagger/cmd/otel-collector/loki"
 )
 
 type Event struct {

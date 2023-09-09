@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/telemetry"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/telemetry"
 )
 
 type Vertex struct {

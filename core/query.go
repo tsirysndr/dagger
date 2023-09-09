@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/dagger/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/pipeline"
 )
 
 type Query struct {

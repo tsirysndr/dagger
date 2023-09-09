@@ -5,9 +5,9 @@ import (
 	"context"
 	"sort"
 
-	"github.com/dagger/dagger/codegen/generator"
-	"github.com/dagger/dagger/codegen/generator/nodejs/templates"
-	"github.com/dagger/dagger/codegen/introspection"
+	"github.com/tsirysndr/dagger/codegen/generator"
+	"github.com/tsirysndr/dagger/codegen/generator/nodejs/templates"
+	"github.com/tsirysndr/dagger/codegen/introspection"
 )
 
 type NodeGenerator struct{}

@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/dagger/dagger/telemetry"
 	bkclient "github.com/moby/buildkit/client"
 	"github.com/nxadm/tail"
+	"github.com/tsirysndr/dagger/telemetry"
 	"github.com/vito/progrock"
 )
 

@@ -6,9 +6,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/dagger/dagger/core"
 	"github.com/iancoleman/strcase"
 	"github.com/opencontainers/go-digest"
+	"github.com/tsirysndr/dagger/core"
 	"github.com/vito/progrock"
 )
 

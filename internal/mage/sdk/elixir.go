@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/internal/mage/util"
 	"github.com/magefile/mage/mg"
+	"github.com/tsirysndr/dagger/internal/mage/util"
 )
 
 const (

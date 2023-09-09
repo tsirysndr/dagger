@@ -1,7 +1,7 @@
 package templates
 
 import (
-	"github.com/dagger/dagger/codegen/generator"
+	"github.com/tsirysndr/dagger/codegen/generator"
 )
 
 // FormatTypeFunc is an implementation of generator.FormatTypeFuncs interface

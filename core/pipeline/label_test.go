@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dagger/dagger/core/pipeline"
 	"github.com/stretchr/testify/require"
+	"github.com/tsirysndr/dagger/core/pipeline"
 )
 
 func TestLoadGitLabels(t *testing.T) {

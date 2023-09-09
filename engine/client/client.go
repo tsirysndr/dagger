@@ -34,9 +34,9 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/telemetry"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/telemetry"
 )
 
 const OCIStoreName = "dagger-oci"
@@ -121,7 +121,7 @@ func Connect(ctx context.Context, params Params) (_ *Client, _ context.Context, 
 		progMultiW = append(progMultiW, fw)
 	}
 
-	tel := telemetry.New()
+	tel := telemetry.New(ctx.Value("id").(string))
 	var cloudURL string
 	if tel.Enabled() {
 		cloudURL = tel.URL()

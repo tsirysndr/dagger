@@ -5,11 +5,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/dagger/dagger/engine/sources/netconfhttp"
 	"github.com/moby/buildkit/executor/oci"
 	"github.com/moby/buildkit/session"
 	"github.com/moby/buildkit/session/upload"
 	"github.com/pkg/errors"
+	"github.com/tsirysndr/dagger/engine/sources/netconfhttp"
 )
 
 func newTransport(rt http.RoundTripper, sm *session.Manager, g session.Group, dns *oci.DNSConfig) http.RoundTripper {

@@ -11,7 +11,6 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dagger/dagger/engine/server"
 	"github.com/mackerelio/go-osstat/cpu"
 	"github.com/mackerelio/go-osstat/loadavg"
 	"github.com/mackerelio/go-osstat/memory"
@@ -19,6 +18,7 @@ import (
 	"github.com/moby/buildkit/util/bklog"
 	"github.com/prometheus/procfs"
 	"github.com/sirupsen/logrus"
+	"github.com/tsirysndr/dagger/engine/server"
 	"golang.org/x/exp/constraints"
 	"golang.org/x/net/trace"
 	"golang.org/x/sys/unix"

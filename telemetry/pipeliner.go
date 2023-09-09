@@ -3,7 +3,7 @@ package telemetry
 import (
 	"sync"
 
-	"github.com/dagger/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/core/pipeline"
 	"github.com/vito/progrock"
 )
 

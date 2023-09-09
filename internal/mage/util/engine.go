@@ -310,7 +310,7 @@ func engineBin(c *dagger.Client, arch string, version string) *dagger.File {
 	}
 	ldflags := []string{"-s", "-w"}
 	if version != "" {
-		ldflags = append(ldflags, "-X", "github.com/dagger/dagger/engine.Version="+version)
+		ldflags = append(ldflags, "-X", "github.com/tsirysndr/dagger/engine.Version="+version)
 	}
 	buildArgs = append(buildArgs, strings.Join(ldflags, " "))
 	buildArgs = append(buildArgs, "/app/cmd/engine")

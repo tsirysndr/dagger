@@ -4,9 +4,9 @@ import (
 	"context"
 	"path"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/engine/buildkit"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 func (p *Project) pythonRuntime(ctx context.Context, bk *buildkit.Client, progSock string, pipeline pipeline.Path) (*Container, error) {

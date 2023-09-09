@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/dagger/dagger/core"
-	"github.com/dagger/dagger/core/pipeline"
 	"github.com/dagger/graphql"
+	"github.com/tsirysndr/dagger/core"
+	"github.com/tsirysndr/dagger/core/pipeline"
 	"github.com/vito/progrock"
 )
 

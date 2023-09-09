@@ -12,11 +12,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/dagger/dagger/codegen/generator"
-	gogenerator "github.com/dagger/dagger/codegen/generator/go"
-	nodegenerator "github.com/dagger/dagger/codegen/generator/nodejs"
-	"github.com/dagger/dagger/codegen/introspection"
-	"github.com/dagger/dagger/tracing"
+	"github.com/tsirysndr/dagger/codegen/generator"
+	gogenerator "github.com/tsirysndr/dagger/codegen/generator/go"
+	nodegenerator "github.com/tsirysndr/dagger/codegen/generator/nodejs"
+	"github.com/tsirysndr/dagger/codegen/introspection"
+	"github.com/tsirysndr/dagger/tracing"
 )
 
 var (

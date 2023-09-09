@@ -16,13 +16,13 @@ import (
 	"github.com/containerd/containerd/diff/apply"
 	"github.com/containerd/containerd/errdefs"
 	"github.com/containerd/containerd/mount"
-	"github.com/dagger/dagger/core"
 	"github.com/klauspost/compress/zstd"
 	"github.com/moby/buildkit/solver/llbsolver/mounts"
 	solverpb "github.com/moby/buildkit/solver/pb"
 	"github.com/moby/buildkit/util/bklog"
 	"github.com/moby/buildkit/util/leaseutil"
 	ocispecs "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/tsirysndr/dagger/core"
 	"golang.org/x/sync/errgroup"
 )
 

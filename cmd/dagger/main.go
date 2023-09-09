@@ -8,9 +8,9 @@ import (
 	"runtime/pprof"
 	"runtime/trace"
 
-	"github.com/dagger/dagger/tracing"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/tracing"
 )
 
 var (

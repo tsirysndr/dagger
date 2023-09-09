@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"dagger.io/dagger"
-	"github.com/dagger/dagger/internal/mage/util"
 	"github.com/magefile/mage/mg" // mg contains helpful utility functions, like Deps
+	"github.com/tsirysndr/dagger/internal/mage/util"
 	"golang.org/x/mod/semver"
 	"golang.org/x/sync/errgroup"
 )

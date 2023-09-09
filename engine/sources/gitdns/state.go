@@ -3,11 +3,11 @@ package gitdns
 import (
 	"strings"
 
-	"github.com/dagger/dagger/engine/buildkit"
 	"github.com/moby/buildkit/client/llb"
 	"github.com/moby/buildkit/solver/pb"
 	"github.com/moby/buildkit/util/gitutil"
 	"github.com/moby/buildkit/util/sshutil"
+	"github.com/tsirysndr/dagger/engine/buildkit"
 )
 
 const AttrNetConfig = "gitdns.netconfig"

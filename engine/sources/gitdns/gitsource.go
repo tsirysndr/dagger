@@ -14,8 +14,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dagger/dagger/engine/buildkit"
-	"github.com/dagger/dagger/network"
 	"github.com/moby/buildkit/cache"
 	"github.com/moby/buildkit/client"
 	"github.com/moby/buildkit/executor/oci"
@@ -31,6 +29,8 @@ import (
 	"github.com/moby/buildkit/util/urlutil"
 	"github.com/moby/locker"
 	"github.com/pkg/errors"
+	"github.com/tsirysndr/dagger/engine/buildkit"
+	"github.com/tsirysndr/dagger/network"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

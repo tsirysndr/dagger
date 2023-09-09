@@ -12,7 +12,7 @@ import (
 	"github.com/magefile/mage/mg"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/dagger/dagger/internal/mage/util"
+	"github.com/tsirysndr/dagger/internal/mage/util"
 )
 
 const (

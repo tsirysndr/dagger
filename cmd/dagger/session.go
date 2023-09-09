@@ -12,11 +12,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/dagger/dagger/core/pipeline"
-	"github.com/dagger/dagger/engine"
-	"github.com/dagger/dagger/engine/client"
 	"github.com/google/uuid"
 	"github.com/spf13/cobra"
+	"github.com/tsirysndr/dagger/core/pipeline"
+	"github.com/tsirysndr/dagger/engine"
+	"github.com/tsirysndr/dagger/engine/client"
 	"github.com/vito/progrock/console"
 )
 
