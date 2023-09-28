@@ -140,7 +140,14 @@ export function buildQuery(q: QueryTree[]): string {
     return acc;
   }, "");
 
-  return `{${query} }`;
+  return `{${query
+    .replaceAll('"StringKind"', "StringKind")
+    .replaceAll('"VoidKind"', "VoidKind")
+    .replaceAll('"IntegerKind"', "IntegerKind")
+    .replaceAll('"BooleanKind"', "BooleanKind")
+    .replaceAll('"ObjectKind"', "ObjectKind")
+    .replaceAll('"ListKind"', "ListKind")
+    .replaceAll("function_", "function")} }`;
 }
 
 /**
