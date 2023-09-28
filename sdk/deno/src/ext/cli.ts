@@ -3,7 +3,7 @@ import { Client } from "../client.ts";
 import { connect } from "../connect.ts";
 import * as defaultModule from "../../default_module.ts";
 
-const module = (await import(Deno.args[1])) || defaultModule;
+const module = (await import(Deno.args[0])) || defaultModule;
 
 export function main() {
   connect(async (client: Client) => {
