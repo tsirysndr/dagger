@@ -17,3 +17,5 @@ export {
   NotAwaitedRequestError,
   ERROR_CODES,
 } from "https://esm.sh/@dagger.io/dagger@0.8.7";
+
+export { execute } from "npm:graphql";

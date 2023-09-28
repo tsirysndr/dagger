@@ -1,9 +1,27 @@
 // deno-lint-ignore-file no-explicit-any
 import { Client, TypeDefKind } from "../client.ts";
 import { connect } from "../connect.ts";
-import * as defaultModule from "../../default_module.ts";
+import { execute } from "../../deps.ts";
 
-const module = (await import(Deno.args[0])) || defaultModule;
+const module = await import(Deno.args[0]);
+
+if (!module) {
+  throw new Error("Module not found");
+}
+
+const { schema, queries } = module;
+
+if (!schema) {
+  throw new Error("Schema not found");
+}
+
+if (!queries) {
+  throw new Error("Queries not found");
+}
+
+const resolvers = Object.keys(module).filter(
+  (key) => key !== "default" && key !== "schema" && key !== "queries"
+);
 
 export function main() {
   connect(async (client: Client) => {
@@ -16,11 +34,17 @@ export function main() {
     if (name === "") {
       const moduleName = await mod.name();
       const typeDef = client.typeDef().withObject(moduleName);
-      const fn = client
-        .newFunction("hello", client.typeDef().withKind(TypeDefKind.Stringkind))
-        .withArg("name", client.typeDef().withKind(TypeDefKind.Stringkind));
 
-      mod = mod.withObject(typeDef.withFunction(fn));
+      for (const resolver of resolvers) {
+        const fn = client
+          .newFunction(
+            resolver,
+            client.typeDef().withKind(TypeDefKind.Stringkind)
+          )
+          .withArg("name", client.typeDef().withKind(TypeDefKind.Stringkind));
+        mod = mod.withObject(typeDef.withFunction(fn));
+      }
+
       const id = await mod.id();
       returnValue = `"${id}"`;
     } else {
@@ -35,7 +59,15 @@ export function main() {
         params.push(argValue.replace(/"/g, ""));
       }
 
-      returnValue = `"${module[name](...params)}"`;
+      const result = await execute({
+        schema,
+        document: queries[name],
+        variableValues: {
+          name: params[0],
+        },
+      });
+
+      returnValue = `"${result.data?.[name]}"`;
     }
 
     await fnCall.returnValue(returnValue as any);

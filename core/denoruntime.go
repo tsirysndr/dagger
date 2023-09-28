@@ -49,8 +49,8 @@ func (mod *Module) denoRuntime(ctx context.Context,
 		Args: []string{
 			"deno",
 			"install",
-			"-r",
 			"--allow-all",
+			"-r",
 			"-n",
 			"runtime",
 			"https://raw.githubusercontent.com/tsirysndr/dagger/zenith-functions/sdk/deno/src/ext/cli.ts",
@@ -62,7 +62,7 @@ func (mod *Module) denoRuntime(ctx context.Context,
 
 	finalEnvCtr, err := buildEnvCtr.UpdateImageConfig(ctx, func(cfg specs.ImageConfig) specs.ImageConfig {
 		cfg.WorkingDir = ModSourceDirPath
-		cfg.Cmd = []string{"file://" + ModSourceDirPath + "/main.ts"}
+		cfg.Cmd = []string{"file://" + ModSourceDirPath + "/mod.ts"}
 		cfg.Entrypoint = []string{"/usr/local/bin/runtime"}
 		return cfg
 	})
