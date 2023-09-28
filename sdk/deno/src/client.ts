@@ -47,8 +47,7 @@ class BaseClient {
     this.sessionToken = sessionToken || "";
     this.client = new GraphQLClient(`http://${host}/query`, {
       headers: {
-        Authorization:
-          "Basic " + Buffer.from(sessionToken + ":").toString("base64"),
+        Authorization: "Basic " + btoa(sessionToken + ":"),
       },
     });
   }

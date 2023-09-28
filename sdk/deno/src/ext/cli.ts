@@ -20,7 +20,9 @@ export function main() {
       const argValue = await arg.value();
     }
 
-    await fnCall.returnValue("Hello" as any);
+    await fnCall.returnValue(
+      '{"helloWorld": { "hello": "Hello tsiry" }}' as any
+    );
   });
 }
 

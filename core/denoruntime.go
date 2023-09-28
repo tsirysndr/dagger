@@ -48,22 +48,22 @@ func (mod *Module) denoRuntime(ctx context.Context,
 	buildEnvCtr, err = buildEnvCtr.WithExec(ctx, bk, progSock, mod.Platform, ContainerExecOpts{
 		Args: []string{
 			"deno",
-			"compile",
-			"--output",
-			runtimeExecutablePath,
+			"install",
 			"-A",
 			"-r",
 			"https://raw.githubusercontent.com/tsirysndr/dagger/zenith-functions/sdk/deno/src/ext/cli.ts",
+			"-n",
+			"runtime",
 		},
 	})
 	if err != nil {
-		return nil, fmt.Errorf("failed to exec deno compile: %w", err)
+		return nil, fmt.Errorf("failed to exec deno install: %w", err)
 	}
 
 	finalEnvCtr, err := buildEnvCtr.UpdateImageConfig(ctx, func(cfg specs.ImageConfig) specs.ImageConfig {
 		cfg.WorkingDir = ModSourceDirPath
-		cfg.Cmd = []string{"main.ts"}
-		cfg.Entrypoint = []string{runtimeExecutablePath}
+		cfg.Cmd = []string{"file://" + ModSourceDirPath + "/main.ts"}
+		cfg.Entrypoint = []string{"/usr/local/bin/runtime"}
 		return cfg
 	})
 	if err != nil {
