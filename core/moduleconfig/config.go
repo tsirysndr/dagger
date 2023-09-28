@@ -9,6 +9,7 @@ type SDK string
 const (
 	SDKGo     SDK = "go"
 	SDKPython SDK = "python"
+	SDKDeno   SDK = "deno"
 )
 
 const Filename = "dagger.json"

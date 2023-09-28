@@ -216,6 +216,7 @@ func updateModuleConfig(
 			}, engineClient)
 		}
 	case moduleconfig.SDKPython:
+	case moduleconfig.SDKDeno:
 	default:
 		return fmt.Errorf("unsupported module SDK: %s", sdk)
 	}

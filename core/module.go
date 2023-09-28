@@ -249,6 +249,14 @@ func (mod *Module) recalcRuntime(
 			mod.SourceDirectory,
 			mod.SourceDirectorySubpath,
 		)
+	case moduleconfig.SDKDeno:
+		runtime, err = mod.denoRuntime(
+			ctx,
+			bk,
+			progSock,
+			mod.SourceDirectory,
+			mod.SourceDirectorySubpath,
+		)
 	default:
 		return fmt.Errorf("unknown sdk %q", mod.SDK)
 	}
