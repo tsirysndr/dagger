@@ -73,7 +73,7 @@ export function main() {
         variableValues,
       });
 
-      console.log("=> result", result);
+      console.log("=> result", result.data);
 
       returnValue = `"${result.data?.[name]}"`;
     }
