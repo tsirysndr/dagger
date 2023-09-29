@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { GraphQLNonNull, GraphQLScalarType } from "npm:graphql";
 import { execute } from "./deps.ts";
-import { hello } from "./src/queries.ts";
+import { hello, add } from "./src/queries.ts";
 import { schema } from "./src/schema.ts";
 
 const result = await execute({
@@ -42,3 +42,14 @@ const helloArgs = getArgsType(schema, "hello");
 
 console.log(helloType);
 console.log(helloArgs);
+
+const addResult = await execute({
+  schema,
+  document: add,
+  variableValues: {
+    a: 1,
+    b: 2,
+  },
+});
+
+console.log(addResult.data);
