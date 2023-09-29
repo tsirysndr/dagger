@@ -3,7 +3,6 @@
 
 
 type Query {
-  add(a: Int!, b: Int!): Int
+  add(a: String!, b: String!): Int
   hello(name: String!): String
-  isEven(num: Int!): Boolean
 }

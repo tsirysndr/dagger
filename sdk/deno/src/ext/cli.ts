@@ -41,10 +41,10 @@ export function main() {
 
     if (name === "") {
       const moduleName = await mod.name();
-      const typeDef = client.typeDef().withObject(moduleName);
+      let objDef = client.typeDef().withObject(moduleName);
 
       for (const key of resolvers) {
-        const objDef = register(client, key, typeDef);
+        objDef = register(client, key, objDef);
         mod = mod.withObject(objDef);
       }
 

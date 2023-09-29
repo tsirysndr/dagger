@@ -45,7 +45,6 @@ export interface NexusGenFieldTypes {
   Query: { // field return type
     add: number | null; // Int
     hello: string | null; // String
-    isEven: boolean | null; // Boolean
   }
 }
 
@@ -53,21 +52,17 @@ export interface NexusGenFieldTypeNames {
   Query: { // field return type name
     add: 'Int'
     hello: 'String'
-    isEven: 'Boolean'
   }
 }
 
 export interface NexusGenArgTypes {
   Query: {
     add: { // args
-      a: number; // Int!
-      b: number; // Int!
+      a: string; // String!
+      b: string; // String!
     }
     hello: { // args
       name: string; // String!
-    }
-    isEven: { // args
-      num: number; // Int!
     }
   }
 }

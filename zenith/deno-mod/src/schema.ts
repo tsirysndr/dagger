@@ -1,7 +1,6 @@
 import {
   queryType,
   stringArg,
-  intArg,
   nonNull,
   makeSchema,
   dirname,
@@ -9,7 +8,7 @@ import {
   resolve,
 } from "../deps.ts";
 
-import { add, hello } from "./main.ts";
+import { hello, add } from "./main.ts";
 
 const Query = queryType({
   definition(t) {
@@ -21,16 +20,10 @@ const Query = queryType({
     });
     t.int("add", {
       args: {
-        a: nonNull(intArg()),
-        b: nonNull(intArg()),
+        a: nonNull(stringArg()),
+        b: nonNull(stringArg()),
       },
       resolve: (_root, args, _ctx) => add(args.a, args.b),
-    });
-    t.boolean("isEven", {
-      args: {
-        num: nonNull(intArg()),
-      },
-      resolve: (_root, args, _ctx) => args.num % 2 === 0,
     });
   },
 });

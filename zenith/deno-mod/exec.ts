@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { GraphQLNonNull, GraphQLScalarType } from "npm:graphql";
 import { execute } from "./deps.ts";
-import { hello, add } from "./src/queries.ts";
+import { hello } from "./src/queries.ts";
 import { schema } from "./src/schema.ts";
 
 const result = await execute({
@@ -39,25 +39,6 @@ const getArgsType = (schema: any, queryName: string) => {
 
 const helloType = getReturnType(schema, "hello");
 const helloArgs = getArgsType(schema, "hello");
-const addType = getReturnType(schema, "add");
-const addArgs = getArgsType(schema, "add");
-const isEvenType = getReturnType(schema, "isEven");
-const isEvenArgs = getArgsType(schema, "isEven");
 
 console.log(helloType);
 console.log(helloArgs);
-console.log(addType);
-console.log(addArgs);
-console.log(isEvenType);
-console.log(isEvenArgs);
-
-const sum = await execute({
-  schema,
-  document: add,
-  variableValues: {
-    a: 1,
-    b: 2,
-  },
-});
-
-console.log(sum.data);
