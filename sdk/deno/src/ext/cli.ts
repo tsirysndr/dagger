@@ -62,7 +62,7 @@ export function main() {
         console.log("args => ", argName, argValue, typeof argValue);
 
         variableValues[argName] = parseArg(
-          argName,
+          argValue,
           argsType.find((a) => a.name === argName)?.type || "String"
         );
       }
@@ -73,7 +73,7 @@ export function main() {
         variableValues,
       });
 
-      console.log("=> result", result.data);
+      console.log("=> result", result);
 
       returnValue = `"${result.data?.[name]}"`;
     }
