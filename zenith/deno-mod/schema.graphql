@@ -3,6 +3,6 @@
 
 
 type Query {
-  add(a: String!, b: String!): Int
+  add(a: Int!, b: Int!): Int
   hello(name: String!): String
 }

@@ -58,8 +58,8 @@ export interface NexusGenFieldTypeNames {
 export interface NexusGenArgTypes {
   Query: {
     add: { // args
-      a: string; // String!
-      b: string; // String!
+      a: number; // Int!
+      b: number; // Int!
     }
     hello: { // args
       name: string; // String!

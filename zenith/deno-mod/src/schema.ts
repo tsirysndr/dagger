@@ -1,5 +1,6 @@
 import {
   queryType,
+  intArg,
   stringArg,
   nonNull,
   makeSchema,
@@ -20,8 +21,8 @@ const Query = queryType({
     });
     t.int("add", {
       args: {
-        a: nonNull(stringArg()),
-        b: nonNull(stringArg()),
+        a: nonNull(intArg()),
+        b: nonNull(intArg()),
       },
       resolve: (_root, args, _ctx) => add(args.a, args.b),
     });

@@ -58,7 +58,7 @@ export function main() {
       for (const arg of args) {
         const argName = await arg.name();
         const argValue = await arg.value();
-        console.log("args => ", argName, argValue);
+        console.log("args => ", argName, argValue, typeof argValue);
         variableValues[argName] = argValue.replace(/"/g, "");
       }
 
@@ -68,7 +68,10 @@ export function main() {
         variableValues,
       });
 
-      returnValue = `"${result.data?.[name]}"`;
+      returnValue =
+        typeof result.data?.[name] === "string"
+          ? `"${result.data?.[name]}"`
+          : result.data?.[name];
     }
 
     await fnCall.returnValue(returnValue as any);
