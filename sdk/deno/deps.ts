@@ -19,3 +19,5 @@ export {
 } from "https://esm.sh/@dagger.io/dagger@0.8.7";
 
 export { execute } from "npm:graphql";
+
+export { GraphQLNonNull, GraphQLScalarType } from "npm:graphql";

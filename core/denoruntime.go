@@ -49,10 +49,10 @@ func (mod *Module) denoRuntime(ctx context.Context,
 		Args: []string{
 			"deno",
 			"install",
-			"--allow-all",
-			"-r",
+			"-A",
 			"-n",
 			"runtime",
+			"-r",
 			"https://raw.githubusercontent.com/tsirysndr/dagger/zenith-functions/sdk/deno/src/ext/cli.ts",
 		},
 	})
