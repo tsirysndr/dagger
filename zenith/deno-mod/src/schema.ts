@@ -8,7 +8,7 @@ import {
   resolve,
 } from "../deps.ts";
 
-import { hello } from "./main.ts";
+import { hello, add } from "./main.ts";
 
 const Query = queryType({
   definition(t) {
@@ -18,14 +18,13 @@ const Query = queryType({
       },
       resolve: (_root, args, _ctx) => hello(args.name),
     });
-    /*t.int("add", {
+    t.int("add", {
       args: {
         a: nonNull(stringArg()),
         b: nonNull(stringArg()),
       },
       resolve: (_root, args, _ctx) => add(args.a, args.b),
     });
-    */
   },
 });
 

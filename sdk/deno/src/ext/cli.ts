@@ -31,8 +31,6 @@ const typeMap: Record<string, TypeDefKind> = {
   Void: TypeDefKind.Voidkind,
 };
 
-const registeredFunctions: Record<string, any> = {};
-
 export function main() {
   connect(async (client: Client) => {
     const fnCall = client.currentFunctionCall();
@@ -46,10 +44,6 @@ export function main() {
       let objDef = client.typeDef().withObject(moduleName);
 
       for (const key of resolvers) {
-        if (registeredFunctions[key]) {
-          continue;
-        }
-        registeredFunctions[key] = true;
         objDef = register(client, key, objDef);
         mod = mod.withObject(objDef);
       }

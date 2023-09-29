@@ -49,7 +49,7 @@ func (mod *Module) denoRuntime(ctx context.Context,
 		Args: []string{
 			"deno",
 			"install",
-			"--allow-all",
+			"-A",
 			"--name",
 			"runtime",
 			"-r",

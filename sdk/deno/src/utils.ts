@@ -206,6 +206,7 @@ export async function compute<T>(
 ): Promise<T> {
   let computeQuery: Awaited<T>;
   try {
+    console.log("query => ", query);
     computeQuery = await client.request(
       gql`
         ${query}

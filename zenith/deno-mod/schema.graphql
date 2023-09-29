@@ -3,5 +3,6 @@
 
 
 type Query {
+  add(a: String!, b: String!): Int
   hello(name: String!): String
 }
