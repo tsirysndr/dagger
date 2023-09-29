@@ -43,24 +43,18 @@ export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
   Query: { // field return type
-    add: number | null; // Int
     hello: string | null; // String
   }
 }
 
 export interface NexusGenFieldTypeNames {
   Query: { // field return type name
-    add: 'Int'
     hello: 'String'
   }
 }
 
 export interface NexusGenArgTypes {
   Query: {
-    add: { // args
-      a: string; // String!
-      b: string; // String!
-    }
     hello: { // args
       name: string; // String!
     }
