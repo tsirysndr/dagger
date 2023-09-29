@@ -73,10 +73,9 @@ export function main() {
         variableValues,
       });
 
-      returnValue =
-        typeof result.data?.[name] === "string"
-          ? `"${result.data?.[name]}"`
-          : result.data?.[name];
+      console.log("=> result", result);
+
+      returnValue = `"${result.data?.[name]}"`;
     }
 
     await fnCall.returnValue(returnValue as any);
