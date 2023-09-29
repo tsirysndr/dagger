@@ -54,12 +54,17 @@ export function main() {
       const args = await fnCall.inputArgs();
       console.log("function call name => ", name);
 
+      const argsType = getArgsType(schema, name);
       const variableValues: Record<string, any> = {};
       for (const arg of args) {
         const argName = await arg.name();
         const argValue = await arg.value();
         console.log("args => ", argName, argValue, typeof argValue);
-        variableValues[argName] = argValue.replace(/"/g, "");
+
+        variableValues[argName] = parseArg(
+          argName,
+          argsType.find((a) => a.name === argName)?.type || "String"
+        );
       }
 
       const result = await execute({
@@ -76,6 +81,19 @@ export function main() {
 
     await fnCall.returnValue(returnValue as any);
   });
+}
+
+function parseArg(value: any, type: string) {
+  switch (type) {
+    case "String":
+      return value.replace(/"/g, "");
+    case "Int":
+      return parseInt(value);
+    case "Boolean":
+      return /^\s*(true|1|on)\s*$/i.test(value);
+    default:
+      return value;
+  }
 }
 
 function register(client: Client, functionName: any, objDef: TypeDef) {
