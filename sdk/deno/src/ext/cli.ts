@@ -45,9 +45,9 @@ export function main() {
 
       for (const key of resolvers) {
         objDef = register(client, key, objDef);
-        mod = mod.withObject(objDef);
       }
 
+      mod = mod.withObject(objDef);
       const id = await mod.id();
       returnValue = `"${id}"`;
     } else {
