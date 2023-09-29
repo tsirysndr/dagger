@@ -41,7 +41,7 @@ func (mod *Module) denoRuntime(ctx context.Context,
 	if err != nil {
 		return nil, fmt.Errorf("failed to update image config: %w", err)
 	}
-	buildEnvCtr, err = buildEnvCtr.WithMountedCache(ctx, bk, "/root/.cache/deno", NewCache("moddenocache"), nil, CacheSharingModeShared, "")
+	buildEnvCtr, err = buildEnvCtr.WithMountedCache(ctx, bk, "/deno-dir", NewCache("moddenocache"), nil, CacheSharingModeShared, "")
 	if err != nil {
 		return nil, fmt.Errorf("failed to mount deno cache: %w", err)
 	}
