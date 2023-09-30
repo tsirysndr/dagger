@@ -14,3 +14,7 @@ export {
   join,
   resolve,
 } from "https://deno.land/std@0.203.0/path/mod.ts";
+export {
+  connect,
+  Client,
+} from "https://cdn.jsdelivr.net/gh/tsirysndr/dagger@zenith-functions/sdk/deno/mod.ts";

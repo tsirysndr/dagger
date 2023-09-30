@@ -17,7 +17,7 @@ const Query = queryType({
       args: {
         name: nonNull(stringArg()),
       },
-      resolve: (_root, args, _ctx) => hello(args.name),
+      resolve: async (_root, args, _ctx) => await hello(args.name),
     });
     t.int("add", {
       args: {

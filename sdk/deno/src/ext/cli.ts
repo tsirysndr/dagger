@@ -21,7 +21,12 @@ if (!queries) {
 }
 
 const resolvers = Object.keys(module).filter(
-  (key) => key !== "default" && key !== "schema" && key !== "queries"
+  (key) =>
+    key !== "default" &&
+    key !== "schema" &&
+    key !== "queries" &&
+    key !== "pipeline" &&
+    key !== "exclude"
 );
 
 const typeMap: Record<string, TypeDefKind> = {
