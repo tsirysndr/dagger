@@ -3,8 +3,15 @@ import { Client, TypeDef, TypeDefKind } from "../client.ts";
 import { connect } from "../connect.ts";
 import { execute } from "../../deps.ts";
 import { getArgsType, getReturnType } from "./lib.ts";
+import fs from "node:fs";
 
-const module = await import(Deno.args[0]);
+let moduleEntrypoint = "file:///src/mod.ts";
+
+if fs.fileExistsSync("/src/.fluentci/mod.ts") {
+  moduleEntrypoint = "file:///src/.fluentci/mod.ts";
+}
+
+const module = await import(moduleEntrypoint);
 
 if (!module) {
   throw new Error("Module not found");
