@@ -7,7 +7,7 @@ import fs from "node:fs";
 
 let moduleEntrypoint = "file:///src/mod.ts";
 
-if fs.fileExistsSync("/src/.fluentci/mod.ts") {
+if (fs.fileExistsSync("/src/.fluentci/mod.ts")) {
   moduleEntrypoint = "file:///src/.fluentci/mod.ts";
 }
 
