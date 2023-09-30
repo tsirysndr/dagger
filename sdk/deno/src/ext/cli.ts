@@ -7,7 +7,7 @@ import { getArgsType, getReturnType } from "./lib.ts";
 
 let moduleEntrypoint = "file:///src/mod.ts";
 
-if (fs.fileExistsSync("/src/.fluentci/mod.ts")) {
+if (fs.existsSync("/src/.fluentci/mod.ts")) {
   moduleEntrypoint = "file:///src/.fluentci/mod.ts";
 }
 
