@@ -20,6 +20,10 @@ if (fs.existsSync("/src/.fluentci/mod.ts")) {
   moduleEntrypoint = "file:///src/.fluentci/mod.ts";
 }
 
+if (!fs.existsSync("/src/mod.ts")) {
+    Deno.exit(0);
+}
+
 const module = await import(moduleEntrypoint);
 
 if (!module) {
