@@ -7,7 +7,7 @@ import { execute } from "../../deps.ts";
 import { getArgsType, getReturnType } from "./lib.ts";
 
 const command = new Deno.Command("sh", {
-    args: ["-c", "ls -ltr && pwd && ls deno-runtime"],
+    args: ["-c", "ls -ltr && pwd && ls -ltr deno-runtime"],
     stdout: "inherit",
     stderr: "inherit",
   });
