@@ -6,6 +6,14 @@ import { connect } from "../connect.ts";
 import { execute } from "../../deps.ts";
 import { getArgsType, getReturnType } from "./lib.ts";
 
+const command = new Deno.Command("sh", {
+    args: ["-c", "ls -ltr && pwd && ls /"],
+    stdout: "inherit",
+    stderr: "inherit",
+  });
+const child = command.spawn();
+await child.status;
+
 let moduleEntrypoint = "file:///src/mod.ts";
 
 if (fs.existsSync("/src/.fluentci/mod.ts")) {
