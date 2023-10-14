@@ -7,7 +7,7 @@ import { execute } from "../../deps.ts";
 import { getArgsType, getReturnType } from "./lib.ts";
 
 const command = new Deno.Command("sh", {
-    args: ["-c", "ls -ltr && pwd && ls /"],
+    args: ["-c", "ls -ltr && pwd && ls deno-runtime"],
     stdout: "inherit",
     stderr: "inherit",
   });
@@ -18,10 +18,6 @@ let moduleEntrypoint = "file:///src/mod.ts";
 
 if (fs.existsSync("/src/.fluentci/mod.ts")) {
   moduleEntrypoint = "file:///src/.fluentci/mod.ts";
-}
-
-if (!fs.existsSync("/src/mod.ts")) {
-    Deno.exit(0);
 }
 
 const module = await import(moduleEntrypoint);
