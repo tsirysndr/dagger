@@ -1,7 +1,0 @@
-{
-  "tasks": {
-    "schema": "deno run -A src/schema.ts",
-    "clean": "rm -rf gen schema.graphql",
-    "exec": "deno run -A exec.ts"
-  }
-}

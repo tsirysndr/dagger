@@ -30,7 +30,7 @@ var rootCmd = &cobra.Command{
 	Long:  help,
 }
 
-var supportedPlatforms = []dagger.Platform{"linux/amd64", "linux/arm64"}
+var supportedPlatforms = []dagger.Platform{"linux/amd64" /*"linux/arm64"*/}
 
 func init() {
 	rootCmd.Flags().StringVar(&modRoot, "root", ".",
@@ -81,11 +81,17 @@ func Bootstrap(cmd *cobra.Command, args []string) error {
 			"./runtime/main.go",
 			"./runtime/generate.go",
 			"./runtime/dagger.json",
+
+			// runtime code, ignoring generated files
+			"./deno-runtime/codegen",
+			"./deno-runtime/main.go",
+			"./deno-runtime/generate.go",
+			"./deno-runtime/dagger.json",
 		},
 	})
 
 	// first, build the SDK's runtime container using the client
-	sdkRuntime := bootstrap(dag, modSrcRoot, modSubPath)
+	sdkRuntime := bootstrap(dag, modSrcRoot, "./runtime")
 
 	// next, build the SDK's runtime container using its own container
 	runtimeVariants, err := bootstrapUsingModule(ctx, dag, modSrcRoot, modSubPath, sdkRuntime)
@@ -140,7 +146,7 @@ const (
 // runtime again, using the module, so the module is always the source of
 // truth.
 func bootstrap(dag *dagger.Client, modSrcRoot *dagger.Directory, subPath string) *dagger.Container {
-	modSubPath := path.Join(modSourceDirPath, modSubPath)
+	modSubPath := path.Join(modSourceDirPath, subPath)
 	return dag.Container().
 		From("golang:1.21-alpine").
 		WithMountedCache("/go/pkg/mod", dag.CacheVolume("modgomodcache")).

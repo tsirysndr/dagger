@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 )
 
-type GoSdk struct{}
+type DenoSdk struct{}
 
 const (
 	ModSourceDirPath      = "/src"
@@ -17,7 +17,7 @@ type RuntimeOpts struct {
 	Platform Platform `doc:"Platform to build for."`
 }
 
-func (m *GoSdk) ModuleRuntime(modSource *Directory, opts RuntimeOpts) *Container {
+func (m *DenoSdk) ModuleRuntime(modSource *Directory, opts RuntimeOpts) *Container {
 	modSubPath := filepath.Join(ModSourceDirPath, opts.SubPath)
 	return m.Base(opts.Platform).
 		WithDirectory(ModSourceDirPath, modSource).
@@ -36,7 +36,7 @@ func (m *GoSdk) ModuleRuntime(modSource *Directory, opts RuntimeOpts) *Container
 		WithLabel("io.dagger.module.config", modSubPath)
 }
 
-func (m *GoSdk) Codegen(modSource *Directory, opts RuntimeOpts) *GeneratedCode {
+func (m *DenoSdk) Codegen(modSource *Directory, opts RuntimeOpts) *GeneratedCode {
 	base := m.Base(opts.Platform).
 		WithMountedDirectory(ModSourceDirPath, modSource).
 		WithWorkdir(path.Join(ModSourceDirPath, opts.SubPath))
@@ -56,12 +56,12 @@ func (m *GoSdk) Codegen(modSource *Directory, opts RuntimeOpts) *GeneratedCode {
 		})
 }
 
-func (m *GoSdk) Base(platform Platform) *Container {
+func (m *DenoSdk) Base(platform Platform) *Container {
 	return m.goBase(platform).
 		WithFile("/usr/bin/codegen", m.CodegenBin(platform))
 }
 
-func (m *GoSdk) CodegenBin(platform Platform) *File {
+func (m *DenoSdk) CodegenBin(platform Platform) *File {
 	return m.goBase(platform).
 		WithMountedDirectory("/sdk", dag.Host().Directory(".")).
 		WithExec([]string{
@@ -73,7 +73,7 @@ func (m *GoSdk) CodegenBin(platform Platform) *File {
 		File("/bin/codegen")
 }
 
-func (m *GoSdk) goBase(platform Platform) *Container {
+func (m *DenoSdk) goBase(platform Platform) *Container {
 	opts := ContainerOpts{}
 	if platform != "" {
 		opts.Platform = platform
